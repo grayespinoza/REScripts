@@ -1,3 +1,4 @@
+-- This script courtesy of @Sarayalth on GitHub
 re.on_pre_application_entry("BeginRendering", function()
   local scene_manager = sdk.get_native_singleton("via.SceneManager")
   local scene_manager_type = sdk.find_type_definition("via.SceneManager")

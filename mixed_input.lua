@@ -9,6 +9,7 @@ local function postHIDManager()
     end
   end
 
+  -- This if-block courtesy of @juliohintze and @WiFiAdapter on GitHub
   if game_name == "re8" then
     local inputMode = hid_manager:call("get_inputMode")
     if inputMode.V == 1 then
