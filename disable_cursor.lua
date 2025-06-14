@@ -13,6 +13,11 @@ re.on_pre_gui_draw_element(function(element, context)
   if name == "GUI_MouseCursor" then
     return false
   end
+  
+  -- Cursor for RE8
+  if name == "GUIMouseCursor" then
+    return false
+  end
 
   -- Cursor for RE4
   if name == "Gui_ui0300" then
