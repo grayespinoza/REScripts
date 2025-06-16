@@ -12,6 +12,11 @@ local function postHIDManager()
   local hid_manager = sdk.get_managed_singleton(sdk.game_namespace("HIDManager"))
 
   if is_re7 then
+    local pad_manager = sdk.get_managed_singleton(sdk.game_namespace("PadManager"))
+    local activePad = pad_manager:call("get_activePad")
+    if activePad:call("getStickRightVertical") ~= 0 or activePad:call("getStickRightHorizontal") ~= 0 then
+      return
+    end
     if hid_manager:get_field("<inputMode>k__BackingField") == 0 then
       hid_manager:set_field("<inputMode>k__BackingField", 1)
     end
