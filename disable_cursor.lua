@@ -5,14 +5,15 @@ local is_re8 = reframework:get_game_name() == "re8"
 local is_re4 = reframework:get_game_name() == "re4"
 
 if not is_re7 and not is_re2 and not is_re3 and not is_re8 and not is_re4 then
-    return
+  return
 end
 log.info("[disable_cursor.lua] loaded")
 
 re.on_pre_gui_draw_element(function(element, context)
   local game_object = element:call("get_GameObject")
-  if game_object == nil then return true end
-
+  if game_object == nil then
+    return true
+  end
   local name = game_object:call("get_Name")
 
   -- Cursor for RE7

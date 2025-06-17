@@ -4,7 +4,7 @@ local is_re3 = reframework:get_game_name() == "re3"
 local is_re8 = reframework:get_game_name() == "re8"
 
 if not is_re7 and not is_re2 and not is_re3 and not is_re8 then
-    return
+  return
 end
 log.info("[mixed_input.lua] loaded")
 
@@ -29,17 +29,9 @@ local function postInputSystem()
 end
 
 if is_re7 or is_re8 then
-  sdk.hook(
-    sdk.find_type_definition(sdk.game_namespace("HIDManager")):get_method("doUpdate"),
-    nil,
-    postHIDManager
-  )
+  sdk.hook(sdk.find_type_definition(sdk.game_namespace("HIDManager")):get_method("doUpdate"), nil, postHIDManager)
 end
 
 if is_re2 or is_re3 then
-  sdk.hook(
-    sdk.find_type_definition(sdk.game_namespace("InputSystem")):get_method("update"),
-    nil,
-    postInputSystem
-  )
+  sdk.hook(sdk.find_type_definition(sdk.game_namespace("InputSystem")):get_method("update"), nil, postInputSystem)
 end
