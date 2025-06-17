@@ -22,11 +22,15 @@ local function postHIDManager()
     end
   end
 
-  -- This if-block courtesy of @juliohintze and @WiFiAdapter on GitHub
   if is_re8 then
-    local inputMode = hid_manager:call("get_inputMode")
-    if inputMode.V == 1 then
-      inputMode.V = 0
+    local pad_manager = sdk.get_managed_singleton(sdk.game_namespace("HIDPadManager"))
+    local activePad = pad_manager:call("get_activePad")
+    if activePad:call("getStickRightVertical") ~= 0 or activePad:call("getStickRightHorizontal") ~= 0 then
+      hid_manager:get_field("<inputMode>k__BackingField"):set_field("V", 0)
+      return
+    end
+    if hid_manager:get_field("<inputMode>k__BackingField"):get_field("V") == 0 then
+      hid_manager:get_field("<inputMode>k__BackingField"):set_field("V", 1)
     end
   end
 end
