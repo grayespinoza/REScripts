@@ -6,7 +6,7 @@ local is_re8 = reframework:get_game_name() == "re8"
 if not is_re7 and not is_re2 and not is_re3 and not is_re8 then
   return
 end
-log.info("[mixed_input.lua] loaded")
+log.info("[kbm_emulation.lua] loaded")
 
 local function postHIDManager()
   local hid_manager = sdk.get_managed_singleton(sdk.game_namespace("HIDManager"))

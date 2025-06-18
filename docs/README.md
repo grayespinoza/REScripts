@@ -4,7 +4,7 @@
 - [aspect_ratio_fit.lua](https://github.com/grayespinoza/REScripts/blob/main/aspect_ratio_fit.lua)
 - [disable_cursor.lua](https://github.com/grayespinoza/REScripts/blob/main/disable_cursor.lua)
 - [disable_letterbox.lua](https://github.com/grayespinoza/REScripts/blob/main/disable_letterbox.lua)
-- [mixed_input.lua](https://github.com/grayespinoza/REScripts/blob/main/mixed_input.lua)
+- [kbm_emulation.lua](https://github.com/grayespinoza/REScripts/blob/main/kbm_emulation.lua)
 
 ## Dependencies
 - [REFramework](https://github.com/praydog/REFramework)
