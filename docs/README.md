@@ -10,6 +10,23 @@
 - [REFramework](https://github.com/praydog/REFramework)
 
 ## Installation
+1. Open *Steam*
+2. Go to *Library*
+3. Right-click your RE Engine game
+4. Click *Properties...*
+5. If on Linux, add these [launch options](https://github.com/praydog/REFramework?tab=readme-ov-file#protonlinux)
+6. Click *Installed Files*
+7. Click *Browse...*
+8. Download [Praydog's REFramework](https://github.com/praydog/REFramework-nightly/releases) corresponding to your RE Engine game
+9. Extract all files from the `.zip`
+10. Move `dinput8.dll` into your *game directory*
+11. Create a folder called `reframework` in your *game directory*
+12. Create a folder called `autorun` in `reframework`
+13. Click on the script you want to install, which is a `.lua` file
+14. Click *Download raw file*
+15. Move the script into `autorun`
+
+You're done, congratulations! Enjoy playing your game.
 
 ## Reporting Issues
 Please use [GitHub Issues](https://github.com/grayespinoza/REScripts/issues) to report bugs, crashes, and other issues.
