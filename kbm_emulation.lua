@@ -1,5 +1,7 @@
-local is_re7 = reframework:get_game_name() == "re7"
-local is_re8 = reframework:get_game_name() == "re8"
+local game_name = reframework:get_game_name()
+
+local is_re7 = game_name == "re7"
+local is_re8 = game_name == "re8"
 
 if not is_re7 and not is_re8 then
   return

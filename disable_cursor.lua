@@ -1,8 +1,10 @@
-local is_re7 = reframework:get_game_name() == "re7"
-local is_re2 = reframework:get_game_name() == "re2"
-local is_re3 = reframework:get_game_name() == "re3"
-local is_re8 = reframework:get_game_name() == "re8"
-local is_re4 = reframework:get_game_name() == "re4"
+local game_name = reframework:get_game_name()
+
+local is_re7 = game_name == "re7"
+local is_re2 = game_name == "re2"
+local is_re3 = game_name == "re3"
+local is_re8 = game_name == "re8"
+local is_re4 = game_name == "re4"
 
 if not is_re7 and not is_re2 and not is_re3 and not is_re8 and not is_re4 then
   return

@@ -1,4 +1,6 @@
-local is_re4 = reframework:get_game_name() == "re4"
+local game_name = reframework:get_game_name()
+
+local is_re4 = game_name == "re4"
 
 if not is_re4 then
   return
